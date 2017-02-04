@@ -41,9 +41,8 @@ class Dynamic_range_stack {
 		void push( int const & );
 		int pop();
 		void clear();
-
+	
 	// Friends
-
 	friend std::ostream &operator<<( std::ostream &, Dynamic_range_stack const & );
 };
 
@@ -54,6 +53,9 @@ Dynamic_range_stack::Dynamic_range_stack( int n ):
 entry_count( 0 ),														
 min_count( 0 ),															
 max_count( 0 ),															
+entry_count( 0 ),													
+min_count( 0 ),														
+max_count( 0 ),														
 initial_capacity( std::max( 1, n ) ),									
 current_capacity( initial_capacity ),									
 stack_array( new int[current_capacity] ),								
